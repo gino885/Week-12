@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="ex.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+<script type="text/javascript">
+
+
+function star() {
+
+	var number1= document.getElementById('input1').value;
+
+		var num1=parseInt(number1);
+		
+	var number2=document.getElementById('input2').value;
+	var num2=parseInt(number2)
+		if(document.getElementById('choice').value== 'please'){
+			 var outcome=num1+num2;
+		}
+		else if(document.getElementById('choice').value== 'let'){
+			var outcome=num1+num2;
+		}
+		else if(document.getElementById('choice').value== 'me'){
+			var outcome=num1+num2;
+		}
+		else {
+			var outcome=num1+num2;
+		}
+		document.getElementById('chat').innerHTML=outcome;	
+}	
+function change(option){
+	var buttom =document.getElementById('run');
+	if(option=='please'){
+		buttom.value='add';
+	}
+	else if(option=='let'){
+		buttom.value='minus';
+	}
+	else if(option=='me'){
+		buttom.value='multiplication';
+	}
+	else if(option=='run'){
+		buttom.value='divide';
+	}
+}
+
+</script>
+	
+</head>
+<body>
+
+	<div style="height: 500px;width: 500px;background-color:lightslategrey;">
+		<br><br><form>
+		<h1 style="text-align:center;">JS Caculator</h1>
+		<h4 style="text-align:center;">Number1</h4>
+			<input id="input1" style="margin-left: 10px;" name ="name"  type ="text" size="65" maxlength="60">
+			<h4 style="text-align:center;">Number2</h4>
+			<input style="margin-left: 10px;" name ="name" id="input2" type ="text" size="65" maxlength="60">
+			        <h4 style="text-align:center;">Operate way?</h4>
+					<select id="choice" style="margin-left: 10px; width:470px;" onchange="change(this.value)">
+   					 <option id="please"value="please">+</option>
+    				<option id="let"value="let">-</option>
+   					<option id="me"value="me">*</option>
+   					 <option id="run"value="run">/</option>
+   					 </select><br><br>
+		<input type="button"id="run" value="add" style="margin-left: 10px;width: 465px;" onclick="star()" size="65"></br></br>
+		<div id="chat"style="text-align: center;"></div></form>
+		</div>
+<div id="chat"></div>
+</body>
+</html>
